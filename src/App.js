@@ -5,6 +5,7 @@ import Todo from "./Components/Todo";
 
 
 class App extends React.Component {
+  // eslint-disable-next-line
   constructor(props) {
     super(props);
   }

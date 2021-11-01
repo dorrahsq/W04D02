@@ -2,6 +2,7 @@ import React from "react";
 import './style.css' ; 
 
 class Footer extends React.Component {
+  // eslint-disable-next-line
   constructor(props) {
     super(props);
   }
