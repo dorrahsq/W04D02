@@ -18,6 +18,7 @@ const Todo =()=> {
 let obj = {
   id: todoarray.length + 1,
   name: e.target.inside.value,
+  
 }
 settodoarray([...todoarray , obj])
 
@@ -35,19 +36,22 @@ settodoarray([...todoarray , obj])
     const neww= prompt("enter the new todos" ,"newlist");; 
     console.log(neww);
     settodoarray(todoarray.map((item ) => {
+      // console.log(id);
+      // console.log(item.id);
       if(id === item.id){
-        return {id:item.id ,name:neww}
+        return {...item,name:neww}
       }else{
         return item
       }
     } ))
-
+        console.log(todoarray);
   }
     return (
       <>
         <h1>To Do list</h1>
         <form onSubmit={createNew}>
           <ul>
+            {console.log(todoarray)}
             {todoarray.map((item, i) => (
                 <TodoItem  todos={item}  key={i} editeitem={editeitem}  deletitem={deletitem}  /> //This  {} is passed as a prop
               ) 

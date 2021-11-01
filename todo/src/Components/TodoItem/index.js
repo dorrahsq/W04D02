@@ -10,7 +10,7 @@ const TodoItem  =(props)=>{
           <span onClick={() => props.deletitem(props.todos.id)}>
             X
           </span>
-          <button onClick={()=> props.editeitem(props.todos.id)}> edite</button>
+          <p onClick={()=> props.editeitem(props.todos.id)}> edite</p>
         </li>
       </>
     );
